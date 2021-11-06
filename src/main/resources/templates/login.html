@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+
+ 
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Hello</title>
+        <link rel=icon href="data:;base64, iVBORw0KGgo=">
+        <link rel="stylesheet" th:href="@{css/reset.css}">
+        <link rel="stylesheet" th:href="@{css/global.css}">
+        <link rel="stylesheet" th:href="@{css/popup.css}">
+    </head>
+
+ 
+
+    <body class="page--v-centered">
+        <th:block th:replace="fragments/header.html :: default"></th:block>
+        <main class="popup" id="credentials">
+            <h1 th:text="#{popup.login.title}"></h1>
+            <form th:action"@{/login}" method="POST" autocomplete="off">
+                <div class="popup__data">
+                     <i>person</i>
+                     <label th:text="#{popup.login.email}"></label>
+                     <input type="text" name="email" placeholder="#{popup.login.email.ph}" required maxlength="50">
+                     <i>lock</i>
+                     <label th:text="#{popup.login.password}"></label>
+                     <input type="password" name="password" placeholder="#{popup.login.password.ph}" required maxlength="50">
+                </div>
+                <input type="submit" value="Entrer" class="button">
+            </form>
+        </main>
+        <th:block th:replace="fragments/footer.html :: default"></th:block>
+    </body>
+
+</html>

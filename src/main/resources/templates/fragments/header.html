@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<body>
+	<header th:fragment="default">
+		<p th:text="${settings.title}"></p>
+		<p th:if="session?.user" class="profil">
+			<span class="profil__name" th:text="${session.user?.name}"></span>
+			<th:block th:each="icon : ${stars}"><i th:text="${icon}"></i></th:block>
+		</p>
+	</header>
+</body>
+
+</html>

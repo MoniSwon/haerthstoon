@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Battle !</title>
+	<link rel="icon" href="data:;base64,iVBORw0KGo=">
+	<link rel="stylesheet" th:href="@{css/reset.css}">
+	<link rel="stylesheet" th:href="@{css/global.css}">
+	<style>
+		a {
+			margin: 20px !important;
+		}
+	</style>
+</head>
+
+<body class='page--v-centered'>
+	<th:block th:replace="fragments/header.html :: default"></th:block>
+	<i>sports_esports</i>
+	<h1>Battle !</h1>
+	<a th:href="@{/login}" class="button">Login</a>
+	<th:block th:replace="fragments/footer.html :: default"></th:block>
+</body>
+
+</html>

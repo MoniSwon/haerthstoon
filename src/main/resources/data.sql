@@ -1,0 +1,2 @@
+INSERT INTO User (email, name, hash, role, xp) VALUES ('bob@worldcompany.com', 'Bob', '5ebe2294ecd0e0f08eab7690d2a6ee69', 1, 0);
+INSERT INTO User (email, name, hash, role, xp) VALUES ('god@universe.com', 'God', '5ebe2294ecd0e0f08eab7690d2a6ee69', 2, 0);
